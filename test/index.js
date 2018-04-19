@@ -72,7 +72,7 @@ test('scaffolding example/', async t => {
   );
   t.ok(
     packageJsonContent ===
-      `{\n  "name": "foo",\n  "dependencies": {\n      "noop": "*"\n  }\n}\n`,
+      `{\n  "name": "foo",\n  "dependencies": {\n      "noop": "file:../fixtures/shared/noop"\n  }\n}\n`,
     '.njk files are compiled correctly'
   );
 
