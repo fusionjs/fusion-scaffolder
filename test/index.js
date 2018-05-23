@@ -65,7 +65,7 @@ test('scaffolding example/', async t => {
   t.ok(fooJsStat.isFile(), 'generic files are copied');
   const fooJsContent = await readFile(join(projectDir, 'foo.js'), 'utf8');
   t.ok(
-    fooJsContent === 'module.exports = {};\n',
+    fooJsContent.includes('module.exports = {};\n'),
     'generic file content is correct'
   );
 

@@ -16,7 +16,10 @@
     "recursive-readdir": "^2.2.2"
   },
   "devDependencies": {
+    "babel-cli": "^6.26.0",
     "babel-eslint": "8.2.3",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-flow": "^6.23.0",
     "eslint": "4.19.1",
     "eslint-config-fusion": "2.0.0",
     "eslint-plugin-cup": "1.0.2",
@@ -32,7 +35,7 @@
   },
   "scripts": {
     "lint": "eslint .",
-    "fast-test": "node test/index.js",
+    "fast-test": "babel-node test/index.js",
     "test": "yarn lint && yarn fast-test",
     "cover": "nyc yarn test"
   },
